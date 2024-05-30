@@ -1,10 +1,11 @@
 import React from "react";
 import { FaCaretDown } from 'react-icons/fa';
+import {Link} from 'react-router-dom';
 const NavLinks=[
   {
     id:1,
     name:'Home',
-    link:'#'
+    link:'/'
   },
   {
     id:2,
@@ -21,17 +22,17 @@ const DropdownLinks=[
   {
     id:1,
     name:'vegetable',
-    link:'#'
+   path:'/vegetable'
   },
   {
     id:2,
     name:'fruit',
-    link:'#'
+    path:'/fruits'
   },
   {
     id:3,
     name:'carrot',
-    link:'#'
+    path:'/carrot'
   }
 ]
 
@@ -64,11 +65,10 @@ function Header() {
 
                     <ul>
                       {
-                        DropdownLinks.map((id,name,link)=>(
+                        DropdownLinks.map(({id,name,path})=>(
                           <li key={id} >
-                            <a href={link} className=" text-xl inline-block w-full rounded-md p-2 hover:bg-primary/20 ">
-                            {name}
-                            </a>
+                           
+                            <Link to={path} className="text-xl inline-block w-full rounded-md p-2 hover:bg-primary/20">{name}</Link>
                           </li>
                         ))
                       }
