@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import "./index.css"
 import Header from './Components/Header.jsx'
 import Hero from './Components/Hero.jsx'
+import Taste from './Components/Taste.jsx'
 
 
 function App() {
@@ -14,6 +15,8 @@ function App() {
     <div className=''>
     <Header />
     <Hero/>
+
+    <Taste />
   
     
     </div>
